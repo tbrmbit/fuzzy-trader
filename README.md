@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # FuzzyTrader
+=======
+# fuzzy-trader
+>>>>>>> b0035883d6047eb2e7dbc2365de00031e16d1209
 
 Helping you make decisions to invest your money 🤑🤑🤑
 
@@ -12,7 +16,11 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
+<<<<<<< HEAD
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+=======
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+>>>>>>> b0035883d6047eb2e7dbc2365de00031e16d1209
 
 ## Running unit tests
 
