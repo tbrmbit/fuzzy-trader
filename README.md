@@ -1,7 +1,6 @@
 # fuzzy-trader
-Helping you make decisions to invest your money 🤑🤑🤑
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
+Helping you make decisions to invest your money 🤑🤑🤑
 
 ## Development server
 
