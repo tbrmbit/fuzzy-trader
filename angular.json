@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "fuzzy-trader"
+    }
+  },
+  "defaultProject": "fuzzy-trader",
+  "cli": {
+    "analytics": "d984705e-1a67-4abe-97c5-30ff0befe5f2"
+  }
 }
