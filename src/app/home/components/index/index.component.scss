@@ -1,13 +1,32 @@
 #home {
   h1 {
-    font-size: 60px;
+    font-size: 30px;
     font-weight: bold;
     text-transform: uppercase;
     color: #fff;
+    opacity: 0;
     text-shadow: 2px 2px 8px rgba(#000, .5);
+    animation-name: title;
+    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
 
     @media (max-width: 768px) {
-      font-size: 30px;
+      font-size: 35px !important;
+    }
+
+    span {
+      opacity: 0;
+      font-size: 120px;
+      animation-name: icon;
+      animation-delay: 1s;
+      animation-duration: 1s;
+      animation-timing-function: cubic-bezier(0.1, 0.7, 4.0, 0.1);
+      animation-fill-mode: forwards;
+
+      @media (max-width: 768px) {
+        font-size: 35px !important;
+      }
     }
   }
 
@@ -39,5 +58,25 @@
 
   .home__content {
     padding: 30px;
+  }
+
+  @keyframes title {
+    0%   {opacity: 0;}
+    100% {
+      opacity: 1;
+      font-size: 60px;
+    }
+  }
+
+  @keyframes icon {
+    0%   {
+      opacity: 0;
+      transform: rotate(125deg)
+    }
+    100% {
+      opacity: 1;
+      font-size: 60px;
+      transform: rotate(0)
+    }
   }
 }
