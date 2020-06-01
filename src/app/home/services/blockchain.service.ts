@@ -16,7 +16,7 @@ export class BlockchainService {
   ) { }
 
   public getBicoinPriceList(): Observable<Tricker> {
-    return this.http.get<Tricker>(this.URL_BLOCKCHAIN);
+    return this.http.get<Tricker>(this.URL_BLOCKCHAIN).pipe(catchError(this.handleError));
   }
 
   public getBtcToPrice(currency: string, value: string): Observable<any> {
@@ -31,7 +31,7 @@ export class BlockchainService {
 
   private toHttpParams(obj: Object): HttpParams {
     return Object.getOwnPropertyNames(obj)
-      .reduce((p, key) => p.set(key, obj[key]), new HttpParams());
+                 .reduce((p, key) => p.set(key, obj[key]), new HttpParams());
   }
 }
 
