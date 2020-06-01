@@ -11,27 +11,33 @@ import { Tricker } from '../../services/models/tricker';
 export class IndexComponent implements OnInit, OnDestroy {
   tricker$: Subscription;
   btc$: Subscription;
+  btcTotal: string;
 
   constructor(
     public blockchainService: BlockchainService
   ) { }
 
   ngOnInit(): void {
-    console.log('here');
     this.getBlockList();
-    this.convertBtc('USD', '554');
   }
 
   ngOnDestroy(): void {
     this.tricker$.unsubscribe();
+    this.btc$.unsubscribe();
   }
 
   public getBlockList() {
-    this.tricker$ = this.blockchainService.getBicoinPriceList().subscribe(data => console.log(data));
+    this.tricker$ = this.blockchainService.getBicoinPriceList()
+                                          .subscribe(data => console.log(data));
   }
 
   public convertBtc(currency: string, value: string) {
-    this.btc$ = this.blockchainService.getBtcToPrice(currency, value).subscribe(data => console.log(data));
+    this.btc$ = this.blockchainService.getBtcToPrice(currency, value)
+                                      .subscribe(data => this.btcTotal = data);
+  }
+
+  public onChangeMoney(value) {
+    this.convertBtc('USD', value);
   }
 
 }

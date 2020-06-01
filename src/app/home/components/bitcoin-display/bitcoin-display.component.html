@@ -1,0 +1,5 @@
+<input #totalMoney 
+      currencyMask 
+      [(ngModel)]="money"
+      (keyup)="onKeyHandler($event)" >
+<p>Total de bitcoins: {{ totalBTC }}</p>
