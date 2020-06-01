@@ -48,6 +48,7 @@ Thumbs.db
 =======
 # dependencies
 /node_modules
+package-lock.json
 
 # System Files
 .DS_Store
