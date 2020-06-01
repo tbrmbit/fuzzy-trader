@@ -1,2 +1,16 @@
-<p>Fuzzy Trader 🤑🤑🤑</p>
-<bitcoin-display (changeMoney)="onChangeMoney($event)" [totalBTC]="btcTotal"></bitcoin-display>
+<div id="home">
+  <header class="header">
+    <div class="header__content">
+      <h1>Fuzzy Trader <span>🤑</span><span>🤑</span><span>🤑</span></h1>
+      <p>Descubra quantos bitcoins você pode comprar com o seu investimento.</p>
+    </div>
+  </header>
+  <div class="container-fluid home__content">
+    <div class="row justify-content-md-center">
+      <div class="col-12 col-md-6">
+        <h2>Quanto você está pensando em investir?</h2>
+        <bitcoin-display (changeMoney)="onChangeMoney($event)" [totalBTC]="btcTotal"></bitcoin-display>
+      </div>
+    </div>
+  </div>
+</div>
