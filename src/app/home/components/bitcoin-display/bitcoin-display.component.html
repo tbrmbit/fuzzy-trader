@@ -1,0 +1,10 @@
+<div class="bitcoin-display">
+  <div class="container">
+    <div class="row">
+      <div class="form-group">
+        <input class="form-control" #totalMoney currencyMask [(ngModel)]="money" (keyup)="onKeyHandler($event)">
+        <label>Total de bitcoins: {{ totalBTC }}</label>
+      </div>
+    </div>
+  </div>
+</div>
